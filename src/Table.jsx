@@ -27,7 +27,7 @@ export default function Table() {
                         contectData && contectData.length && contectData.map((item, i) => (
                             <tr key={item.id}>
                                 <td>{i+1}</td>
-                                <td><Avatar name={item.name} size='50' className='avatar' />{item.name}</td>
+                                <td><Avatar name={item.name} size='50' className='avatar' /><span>{item.name}</span></td>
                                 <td>{item.phone}</td>
                                 <td>{item.email}</td>
                                 <td className='action'>
