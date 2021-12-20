@@ -42,7 +42,7 @@ export default function List() {
                         onChange={(e) => setname(e.target.value)}
                     /><br></br>
                     <input
-                        type="text"
+                        type="number"
                         placeholder='enter the number'
                         className='input-group'
                         value={phone}
@@ -52,7 +52,7 @@ export default function List() {
                     <br />
 
                     <input
-                        type="text"
+                        type="email"
                         placeholder='enter the email'
                         className='input-group'
                         value={email}

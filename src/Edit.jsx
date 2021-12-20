@@ -55,7 +55,7 @@ export default function Edit() {
                         onChange={(e) => setname(e.target.value)}
                     /><br></br>
                     <input
-                        type="text"
+                        type="number"
                         placeholder='enter the number'
                         className='input-group'
                         value={phone}
@@ -65,7 +65,7 @@ export default function Edit() {
                     <br />
 
                     <input
-                        type="text"
+                        type="email"
                         placeholder='enter the email'
                         className='input-group'
                         value={email}
