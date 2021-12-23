@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch } from "react-redux"
 import  {newcontect} from "./Action/Action"
 import shortid from 'shortid';
-// import {useHisroty} from 'react-router-dom'
 
 
 export default function List() {
