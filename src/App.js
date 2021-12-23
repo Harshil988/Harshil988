@@ -20,6 +20,8 @@ function App() {
   <Route path="/contectlist" element={<Table/>}/>
   <Route path="/newcontectlist" element={<List />}/>
   <Route path="/Editlist/:id" element={<Edit />}/>
+  <Route path="*" element={<Contect/>,<Table/>} />
+
 
 </Route>
 
