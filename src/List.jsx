@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { useDispatch } from "react-redux"
 import { newcontect } from "./Action/Action"
 import shortid from 'shortid';
-// import {} from 'react-router';
+
+import { useNavigate} from 'react-router-dom';
 
 
 export default function List() {
-    // let history=useHisroty();
-    // console.log("props",props);
+    const navigate = useNavigate()
     const dispach = useDispatch();
     const [name, setname] = useState("");
     const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ export default function List() {
                 email: email,
             };
             dispach(newcontect(new_contect));
-
+            navigate("/contectlist")
 
         }
         else {
@@ -32,6 +32,12 @@ export default function List() {
         }
 
 
+    }
+    function onlyNumberKey(evt) {
+        var ASCIICode = evt.which ? evt.which : evt.keyCode;
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+            evt.preventDefault();
+        }
     }
 
     return (
@@ -52,11 +58,15 @@ export default function List() {
                                         onChange={(e) => setname(e.target.value)}
                                     /><br></br>
                                     <input
-                                        type="number"
+                                        type="text"
                                         placeholder='enter the number'
                                         className='input-group fs-4'
+                                        maxlength="10"
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
+                                        onKeyPress={(e) => {
+                                            onlyNumberKey(e);
+                                        }}
 
                                     />
                                     <br />

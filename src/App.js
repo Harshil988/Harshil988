@@ -4,30 +4,30 @@ import Contect from './Contect';
 import Table from './Table';
 import List from './List';
 import Edit from './Edit';
-import {Route, Routes} from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 
 function App() {
   return (
     <div >
       <div>
-      <Contect />
-     
+        <Contect />
+
       </div>
-      <Routes> 
-<Route>
-  <Route exact path="/" element={<Contect/>,<Table/>}/>
-  <Route path="/dashboard" element={<Contect/>,<Table/>}/>
-  <Route path="/contectlist" element={<Table/>}/>
-  <Route path="/newcontectlist" element={<List />}/>
-  <Route path="/Editlist/:id" element={<Edit />}/>
-  <Route path="*" element={<Contect/>,<Table/>} />
+      <Routes>
+        <Route>
+          <Route exact path="/" element={<Contect />} />
+          <Route path="/dashboard" element={<Contect />} />
+          <Route path="/contectlist" element={<Table />} />
+          <Route path="/newcontectlist" element={<List />} />
+          <Route path="/Editlist/:id" element={<Edit />} />
+          <Route path="*" element={<Contect />} />
 
 
-</Route>
+        </Route>
 
       </Routes>
-      
-     
+
+
     </div>
   );
 }

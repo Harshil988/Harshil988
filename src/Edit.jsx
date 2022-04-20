@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from "react-redux"
 import { getcontect, update } from "./Action/Action"
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 
 
 export default function Edit() {
+    const navigate = useNavigate()
     let { id } = useParams();
     const dispach = useDispatch();
     const contect = useSelector((state) => state.data.contect)
@@ -38,6 +40,7 @@ export default function Edit() {
         };
         console.log("update", update_contect);
         dispach(update(update_contect))
+        navigate("/contectlist")
 
     }
 
