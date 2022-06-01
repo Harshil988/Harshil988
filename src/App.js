@@ -15,7 +15,7 @@ function App() {
       </div>
       <Routes>
         <Route>
-          <Route exact path="/" element={<Contect />} />
+          <Route exact path="/" element={<Table />} />
           <Route path="/dashboard" element={<Contect />} />
           <Route path="/contectlist" element={<Table />} />
           <Route path="/newcontectlist" element={<List />} />

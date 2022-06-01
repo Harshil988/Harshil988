@@ -86,7 +86,7 @@ export default function Edit() {
                                     </button>
 
 
-                                    <Link to="/">
+                                    <Link to="/contectlist">
                                         <button
                                             className='btn btn-outline-danger mt-3 '>
                                             cancle
